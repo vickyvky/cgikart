@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.cgikart.bean.Product" table="product">
+	<meta attribute="class-description">
+	This class contains the product details.
+	</meta>
+	<id name="prod_id" type="int" column="prod_id">
+		<generator class="native"/>
+	</id>
+	    <property name="prod_name" type="string" column="prod_name" not-null="true" />
+		<property name="prod_price" type="int" column="prod_price" not-null="true" />
+		<property name="prod_desc" type="string" column="prod_desc" not-null="true" />
+		<property name="prod_category" type="string" column="prod_category" not-null="true" />
+		<property name="stock" type="int" column="stock" not-null="true" />
+		<property name="path" type="string" column="path" not-null="true" />
+</class>
+
+</hibernate-mapping>

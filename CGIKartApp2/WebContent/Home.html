@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+#button {
+    line-height: 30px;
+    width: 60px;
+    font-size: 13pt;
+    font-family: arial;
+    margin-top: 15px;
+    margin-right: 5px;
+    position: absolute;
+    top: 10;
+    right: 0;
+}
+#buttonCart {
+    line-height: 30px;
+    width: 60px;
+    font-size: 13pt;
+    font-family: arial;
+    margin-top: 15px;
+    margin-right: 70px;
+    position: absolute;
+    top: 10;
+    right: 0;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.menu {
+  float: left;
+  width: 100%;
+}
+.menuitem {
+  padding: 10px;
+  margin-top: 8px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+ 
+  width: 50%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 100%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+<div style="background-color:red;padding:8px;">
+
+
+<img  src="cgi2.png"  style="float: left;
+  width: 150px;
+  height: 100px;
+  background: #555;
+  "><br>
+  
+  
+  <font face="arial" size="5" color="white"  style="
+  text-align:center;
+  top: 18px;
+  right: 50px;">
+  <h2><b>CGI-KART</b></h2></font>
+  
+  <font size="1"  >Experience the commitment. </font>
+  
+
+</div>
+<br>
+<input id="button" type="button" onMouseOver="User Login" value="Login"> 
+<input id="buttonCart" type="button" onMouseOver="Add to Cart" value="Cart">
+<div style="overflow:auto" align="center">
+  <div class="menu">
+    <hr>
+    <input class="menuitem" type="button" value="Lifestyle">
+    <input class="menuitem" type="button" value="Electronics">
+    <input class="menuitem" type="button" value="Fashion">
+    <input class="menuitem" type="button" value="Stationary">
+    <hr>
+  </div>
+</div>
+	
+<div class="column"> 
+  <div class="row">
+  <a href="default.html">
+    <img  src="ec.jpg" alt="Electronics" style="width:100%">
+    </a>
+    <a href="default.html">
+    <img src="bok.jpg" style="width:100%">
+    </a>
+    </div>
+  </div>
+  
+<div class="column"> 
+  <div class="row">
+  <a href="default.html">
+    <img src="fs.jpg" style="width:100%">
+    </a>
+    <a href="default.html">
+    <img src="home.jpg" style="width:100%">
+    </a>
+   
+  </div>
+  
+
+ </div>
+ 
+ <img  src="bt.png" height="300" width="1200 ">
+</body>
+</html>

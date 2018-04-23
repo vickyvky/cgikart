@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="com.cgikart.bean.Order" table="orders">
+	<meta attribute="class-description">
+	This class contains the Order details.
+	</meta>
+	<id name="index" type="int" column="indx">
+		<generator class="native"/>
+	</id>
+		 <property name="ordId" type="int" column="ord_Id" not-null="true"/>
+		 <property name="cust_id" type="int" column="cust_id" not-null="true"/>
+		 <property name="prod_id" type="int" column="prod_id" not-null="true"/>
+		 <property name="totalCost" type="int" column="totalCost" not-null="false"/>
+
+</class>
+
+</hibernate-mapping>
