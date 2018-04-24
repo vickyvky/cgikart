@@ -72,6 +72,11 @@
 
 </table>
 </form>
+<span style="float: left;">
+<c:if test="${login_error_admin}">
+ <font color="red">Incorrect Username or Password</font>
+</c:if>
+</span>
 </td>
 </tr>
 </table>

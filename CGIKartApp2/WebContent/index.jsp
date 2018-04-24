@@ -166,7 +166,7 @@ body {
    </c:if>
    <c:if test="${empty role}">
  <form action="login.jsp">
- <input type="submit"  value="Login">
+ <input id="button" type="submit"  value="Login">
  </form> 
    </c:if>
   

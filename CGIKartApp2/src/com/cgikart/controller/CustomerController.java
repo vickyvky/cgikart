@@ -25,16 +25,21 @@ public class CustomerController {
 		CustomerDaoInterface dao=new CustomerDaoImpl();
 		int result=dao.loginCustomer(username, password);
 		System.out.println("Login "+result);
-		model.addAttribute("login_error",!(result!=1));           
 		if(result!=-1)
 		{
+			model.addAttribute("login_error",false);
+
 			HttpSession session= request.getSession();
 			session.setAttribute("userLoginSession", result);
 			session.setAttribute("role", "customer");
 			return "index";
 		}
 		else
+		{
+			model.addAttribute("login_error",true);
+
 			return "login";
+		}
 	}
 	@RequestMapping(value="/logout")
 	public String logoutAll(ModelMap model, HttpServletRequest request) 
@@ -52,11 +57,11 @@ public class CustomerController {
 			HttpSession session= request.getSession();
 			session.setAttribute("userLoginSession", username);
 			session.setAttribute("role", "admin");
-			model.addAttribute("login_error",false);
+			model.addAttribute("login_error_admin",false);
 			return "Adminpage";
 		}
 		else
-			model.addAttribute("login_error",true);
+			model.addAttribute("login_error_admin",true);
 			return "login";
 	}
 

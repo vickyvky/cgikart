@@ -9,12 +9,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
-<jsp:include page="menubar.jsp"></jsp:include>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<jsp:include page="header.jsp"></jsp:include>
+  <c:if test="${role!='admin'}">
+
+<jsp:include page="menubar.jsp"></jsp:include>
+</c:if>
+
 
 <form action="searchProduct">
 		<input type="text" name="prod_name" >
